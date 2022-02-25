@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Lato:wght@700&display=swap');
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+.menu {
+    font-family: 'Concert One', cursive, sans-serif; 
+    width: auto;
+    height: 280px;
+    background-color: #000;
+    color: #FFF;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 130px;
+    height: 130px;
+    border-radius: 65px;
+}
+nav {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+
+}
+.menu ul {
+    display: flex;
+}
+.menu ul, .menu li {
+    list-style: none;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+.mapa {
+    background-image: url('../images/bg.png');
+    background-position: bottom;
+    background-size: cover;
+    height: calc(100vh - 280px);
+    
+}
+
+
+
+
+.config {
+    width: auto;
+    height: 650px;
+}
+.section-title {
+    font-size: 30px;
+    text-align: center;
+    margin: 30px;
+    padding: 40px;
+}
+.area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+}
+.area1 .titulo {
+    padding-top: 20px;
+    font-size: 20px;
+    text-align: center;
+
+}
+.area1 .descrição {
+    padding-top: 10px;
+    font-size: 17px;
+    text-align: center;
+}
+.area1 .status {
+    color: #4F4F4F;
+}
+.area1 {
+    width: 350px;
+    height: 420px;
+    padding: 20px;
+    background-color: #AAA;
+    color: #000;    
+    line-height: 25px;
+    border-radius: 15px;
+}
+.icon-discord img {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+.doacoes {
+    width: auto;
+    height: 550px;
+    background-color: #2E2C2A;
+    color: #fff;
+}
+.area-doacao {
+    display: flex;
+    justify-content: center;    
+}
+.seaction-image {
+    display: flex;
+    padding-right: 180px;
+    justify-content: center;
+    align-items: center;
+}
+.seaction-image img {
+    width: 300px;
+    height: 250px;
+}
+.section-recompensa {
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    font-size: 19px;
+    line-height: 26px;
+    margin: 20px;
+}
+.section-recompensa span {
+    font-size: 15px;
+    color: #ccc;
+}
+
+
+
+.discord {
+    width: auto;
+    height: 550px;
+    background-color: #fff;
+    color: #000;
+}
+.area-discord {
+    display: flex;
+    justify-content: center;
+    
+}
+.descricao-discord {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 180px;
+    width: 500px;
+    height: 300px;
+    font-size: 20px;
+}
+.widget {
+    display: block;
+}
+.widget-discord {
+    margin-bottom: 65px;
+}
+.images {
+    margin: 10px;
+    width: 450px;
+    height: 140px;
+    background-color: #35363B;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+}
+.title-discord {
+    display: flex;
+    justify-content: center;
+    margin: -45px;
+    font-size: 20px;
+    color: #AAA;
+}
+.discord-logo img {
+    width: 300px;
+    height: 90px;
+    margin-top: 25px;
+}
+.discord-agartha img{
+    width: 80px;
+    height: 80px;
+    margin-top: 25px;
+    border-radius: 40px;
+}
+
+
+
+.foot {
+    width: auto;
+    height: 350px;
+    background-color: #000;
+    display: flex;
+    justify-content:center;
+    align-items: center ;
+}
+.area-foot {
+    display: block;
+    width: 600px;
+    height: 200px;
+}
+.imagem-footer {
+    margin-left: 200px;
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    color: #AAA;
+}
+.imagem-footer h4 {
+    margin-left: 10px;
+}
+.imagem-footer img {
+    width: 200px;
+    height: 150px;
+}
+.agradecimento {
+    width: 600px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #AAA;
+}
+.area-foot2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: pink;
+    background-color: #000;
+    
+}
