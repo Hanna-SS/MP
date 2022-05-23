@@ -1,37 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Lato:wght@700&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+  
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
 }
+#scroll {
+    transition: 10s;
+    width: auto;
+    height: 80px;
+    background-color: #000;
+    font-family: 'Concert One', cursive, sans-serif; 
+    display: none;
+}
+.menu-scroll {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 80px;
+}
 .menu {
     font-family: 'Concert One', cursive, sans-serif; 
-    width: auto;
-    height: 280px;
+    width: calc(100vw);
+    height: 150px;
     background-color: #000;
     color: #FFF;
     display: flex;
     justify-content: space-around;
+    position: fixed;
     
 }
 .menu-opener {
     display: none;
 }
-.logo {
+#logo {
     display: flex;
     align-items: center;
 }
-.logo img {
-    width: 130px;
-    height: 130px;
-    border-radius: 65px;
+#logo img {
+    width: 250px;
+    height: 250px;
 }
-nav {
+.menu-scroll nav, nav {
     display: flex;
     align-items: center;
     font-size: 28px;
-
 }
-.menu ul {
+.menu ul, #scroll ul {
     display: flex;
 }
 .menu ul, .menu li {
@@ -40,27 +56,38 @@ nav {
     padding: 20px;
     justify-content: space-between;
 }
+#scroll ul, #scroll li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
 a {
     cursor: pointer;
     text-decoration: none;
+    color: #FFF;
 }
 
 
 
 .mapa {
-    background-image: url('../images/bg.png');
+    background-image: url(../images/bg.png);
     background-position: bottom;
     background-size: cover;
-    height: calc(100vh - 280px);   
+    height: calc(100vh - 50px);
+       
 }
 .mini-map {
     display: none;
 }
+.mapa iframe {
+    
+    justify-content: center;
+    margin-top: 200px;
+}
 
 
-
-
-.config {
+#config {
     width: auto;
     height: 650px;
 }
@@ -113,7 +140,7 @@ a {
 
 
 
-.doacoes {
+#doacoes {
     width: auto;
     height: 550px;
     background-color: #2E2C2A;
@@ -148,7 +175,7 @@ a {
 
 
 
-.discord {
+#discord {
     width: auto;
     height: 550px;
     background-color: #fff;
@@ -255,16 +282,17 @@ a {
 @media (max-width:450px) {
     .menu {
         margin: auto;
-        width: 450px;
+        max-width: 100%;
         height: 100px;
         display: flex;
         align-items: center;
     }
-    .logo {
+    #logo {
         display: flex;
         align-items: center;
+        
     }
-    .logo img {
+    #logo img {
         width: 80px;
         height: 80px;
     }
@@ -279,6 +307,7 @@ a {
     nav {
         display: none;
     }
+    
 
 
 
@@ -305,9 +334,9 @@ a {
 
 
 
-    .config {
+    #config {
         display: block;
-        width: 450px;
+        max-width: 100%;
         height: 1560px;
     }
     .area {
@@ -323,7 +352,7 @@ a {
     
 
 
-    .doacoes {
+    #doacoes {
         display: block;
         width: auto;
         height: 850px;
@@ -349,7 +378,7 @@ a {
 
 
 
-    .discord {
+    #discord {
         display: block;
         width: auto;
         height: 1000px;
