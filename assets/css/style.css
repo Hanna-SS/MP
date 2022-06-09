@@ -7,19 +7,6 @@ body {
     margin: 0;
     font-family: 'Lato', sans-serif;
 }
-#scroll {
-    transition: 10s;
-    width: auto;
-    height: 80px;
-    background-color: #000;
-    font-family: 'Concert One', cursive, sans-serif; 
-    display: none;
-}
-.menu-scroll {
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 80px;
-}
 .menu {
     font-family: 'Concert One', cursive, sans-serif; 
     width: calc(100vw);
@@ -31,8 +18,18 @@ body {
     position: fixed;
     
 }
-.menu-opener {
+.hamburguer {
     display: none;
+    cursor: pointer;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #FFF;
 }
 #logo {
     display: flex;
@@ -41,13 +38,14 @@ body {
 #logo img {
     width: 250px;
     height: 250px;
+    margin-top: 20px;
 }
-.menu-scroll nav, nav {
+.menu nav {
     display: flex;
     align-items: center;
     font-size: 28px;
 }
-.menu ul, #scroll ul {
+.menu ul {
     display: flex;
 }
 .menu ul, .menu li {
@@ -55,12 +53,6 @@ body {
     display: flex;
     padding: 20px;
     justify-content: space-between;
-}
-#scroll ul, #scroll li {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
 }
 a {
     cursor: pointer;
@@ -98,20 +90,25 @@ a {
     padding: 40px;
 }
 .area {
+    width: 1000px;
+    margin: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-top: 20px;
     text-align: center;
 }
+
 .area1 {
-    width: 350px;
+    width: 300px;
     height: 420px;
-    padding: 20px;
+    padding: 15px;
+    margin: 20px;
     background-color: #AAA;
     color: #000;    
-    line-height: 25px;
+    line-height: 22px;
     border-radius: 15px;
+    
 }
 .area1 .titulo {
     padding-top: 20px;
@@ -121,19 +118,26 @@ a {
 }
 .area1 .descrição {
     padding-top: 10px;
-    font-size: 17px;
+    font-size: 15px;
     text-align: center;
+    height: 145px;
 }
 .area1 .status {
     color: #4F4F4F;
+    height: 120px;
+    line-height: 18px;
+    font-size: 14px;
 }
-
+.icon-discord {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
 .icon-discord img {
     width: 70px;
     height: 70px;
     margin: 10px;
-    justify-content: center;
-    align-items: center;
+    
 }
 
 
@@ -168,6 +172,9 @@ a {
     line-height: 26px;
     margin: 20px;
 }
+.section-recompensa p {
+    padding: 20px;
+}
 .section-recompensa span {
     font-size: 15px;
     color: #ccc;
@@ -176,10 +183,11 @@ a {
 
 
 #discord {
-    width: auto;
-    height: 550px;
+    width: 100%;
+    height: 720px;
     background-color: #fff;
     color: #000;
+    
 }
 .area-discord {
     display: flex;
@@ -190,44 +198,62 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 180px;
+    margin: 20px;
+    padding: 20px;
     width: 500px;
-    height: 300px;
-    font-size: 20px;
+    height: 450px;
+    font-size: 18px;
 }
 .widget {
-    display: block;
+    display: flex;
+    margin-top: 40px;
+    flex-direction: column;
+    width: 450px;
+    height: 500px;
 }
 .widget-discord {
-    margin-bottom: 65px;
-}
-.images {
     margin: 10px;
-    width: 450px;
-    height: 140px;
-    background-color: #35363B;
+    width: 400px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background-color: #35363B;
     border-radius: 20px;
+}
+.images {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
 }
 .title-discord {
     display: flex;
     justify-content: center;
-    margin: -45px;
-    font-size: 20px;
+    font-size: 18px;
     color: #AAA;
 }
-.discord-logo img {
-    width: 300px;
-    height: 90px;
-    margin-top: 25px;
+.discord-logo {
+    width: 280px;
+    height: 110px;
 }
-.discord-agartha img{
-    width: 80px;
+.discord-logo img {
+    width: 250px;
     height: 80px;
     margin-top: 25px;
-    border-radius: 40px;
+    margin-left: 20px;
+}
+.discord-agartha {
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+}
+.discord-agartha img{
+    width: 70px;
+    height: 70px;
+    margin-top: 10px;
+    border-radius: 35px;
 }
 
 
@@ -277,15 +303,14 @@ a {
     
 }
 
-
-
-@media (max-width:450px) {
+@media (min-width:320px) and (max-width:650px) {
     .menu {
-        margin: auto;
+        
         max-width: 100%;
         height: 100px;
         display: flex;
         align-items: center;
+        justify-content: space-around;
     }
     #logo {
         display: flex;
@@ -293,21 +318,50 @@ a {
         
     }
     #logo img {
-        width: 80px;
-        height: 80px;
+        width: 140px;
+        height: 140px;
     }
-    .menu-opener {
+    .hamburguer {
         display: block;
+        padding-left: 100px;
         justify-content: right;
     }
-    .menu-opener img {
-        width: 70px;
-        height: 70px;
+    .hamburguer.active .bar:nth-child(2) {
+        opacity: 0;
     }
-    nav {
-        display: none;
+    .hamburguer.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
     }
-    
+    .hamburguer.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    nav ul{
+        width: 100%;
+    }
+    nav .nav-menu.active{
+        align-items: center;
+    }
+    .nav-menu {
+        position: fixed;
+        left: -120%;
+        top: 90px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #000;
+        opacity: 0.8;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        margin: 0px;
+        padding: 0px;
+        
+    }
+    .nav-menu.active {
+        left: 0;
+        margin: 0px;
+        padding: 0px;
+        
+    }
 
 
 
@@ -337,51 +391,64 @@ a {
     #config {
         display: block;
         max-width: 100%;
-        height: 1560px;
+        height: 1500px;
     }
     .area {
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
     .area1 {
         padding: 10px;
-        width: 330px;
-        height: 450px;
+        width: 280px;
+        height: 420px;
         margin-bottom: 10px;
+        font-size: 11px;
     }
     
 
 
     #doacoes {
-        display: block;
+        display: flex;
+        flex-direction: column;
         width: auto;
-        height: 850px;
+        height: 800px;
     }
     .area-doacao {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
+    }
+    .section-title {
+        margin: 10px;
+        padding: 10px;
     }
     .seaction-image {
-        width: 400px;
+        width: 280px;
         padding: 0px;
     }
     .seaction-image img {
         display: flex;
         justify-content: center;
+        width: 250px;
+        height: 220px;
     }
     .section-recompensa {
         width: auto;
+        font-size: 14px;
     }
-
+    .section-recompensa span {
+        font-size: 12px;
+    }
 
 
 
     #discord {
         display: block;
         width: auto;
-        height: 1000px;
+        height: 800px;
         
     }
     .area-discord {
@@ -393,39 +460,285 @@ a {
         margin-top: 0px;
     }
     .descricao-discord {
-        width: 350px;
-        height: 350px;
-        padding: 0px;
-        margin-bottom: 80px;
+        width: 80%;
+        height: 230px;
+        padding: 10px;
+        margin: 0px;
+        font-size: 14px;
     }
 
-
-
-
+    .widget {
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        width: 300px;
+        height: 500px;
+        align-items: center;
+    }
+    .widget-discord {
+        margin: 10px;
+        width: 280px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #35363B;
+        border-radius: 20px;
+    }
+    .title-discord{
+        font-size: 16px;
+    }
     .images {
-        width: 350px;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        
+    }
+    .discord-logo {
+        width: 200px;
         height: 120px;
     }
     .discord-logo img {
-        width: 250px;
-        height: 70px;
+        width: 200px;
+        height: 75px;
         margin-top: 25px;
+    }
+    .discord-agartha {
+        width: 70px;
+        height: 100px;
+        padding: 10px;
+        margin: 10px;
     }
     .discord-agartha img{
         width: 60px;
         height: 60px;
-        margin-top: 25px;
+        margin-top: 20px;
         border-radius: 30px;
     }
 
-    .agradecimento {
+    .foot {
+        width: 100%;
+    }
+    .area-foot {
+        width: 100%;
         
+    }
+    .imagem-footer {
+        display: flex;
+        margin: auto;
+        align-items: center;
+    } 
+    .agradecimento {
+        width: 100%;
         font-size: 12px;
     }
 }
 
 
 
-@media (min-width:500px) and (max-width:799px) {
+
+
+
+@media (min-width:651px) and (max-width:999px) {
+    .menu {
+        
+        max-width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    #logo {
+        display: flex;
+        align-items: center;
+        
+    }
+    #logo img {
+        width: 160px;
+        height: 160px;
+    }
+    .hamburguer {
+        display: block;
+        padding-left: 100px;
+        justify-content: right;
+    }
+    .hamburguer.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburguer.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburguer.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    nav ul{
+        width: 100%;
+    }
+    nav .nav-menu.active{
+        align-items: center;
+    }
+    .nav-menu {
+        position: fixed;
+        left: -120%;
+        top: 90px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #000;
+        opacity: 0.8;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        margin: 0px;
+        padding: 0px;
+        
+    }
+    .nav-menu.active {
+        left: 0;
+        margin: 0px;
+        padding: 0px;
+    }
     
+    #config {
+        display: block;
+        max-width: 100%;
+        height: 1500px;
+    }
+    .area {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .area1 {
+        padding: 10px;
+        width: 450px;
+        height: 360px;
+        margin-bottom: 10px;
+        font-size: 11px;
+    }
+    .area1 .descrição {
+        height: 110px;
+    }
+    .area1 .status {
+        height: 100px;
+    }
+    #doacoes {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 750px;
+        margin: 20px auto;
+    }
+    .area-doacao {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .seaction-image {
+        width: 320px;
+        padding: 0px;
+    }
+    .seaction-image img {
+        display: flex;
+        justify-content: center;
+    }
+    .section-recompensa {
+        width: auto;
+        font-size: 14px;
+    }
+    .section-recompensa span {
+        font-size: 12px;
+    }
+    .section-title {
+        margin: 20px;
+        padding: 30px;
+    }
+    #discord {
+        display: block;
+        width: auto;
+        height: 900px;
+        
+    }
+    .area-discord {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: 0px;
+    }
+    .descricao-discord {
+        width: 80%;
+        height: 250px;
+        padding: 10px;
+        margin: 10px;
+        font-size: 16px;
+    }
+    .title-discord {
+        width: 100%;
+        font-size: 16px;
+        height: 22px;
+    }
+    .widget {
+        display: flex;
+        margin-top: 40px;
+        flex-direction: column;
+        width: 450px;
+        height: 500px;
+    }
+    .widget-discord {
+        margin: 10px;
+        width: 400px;
+        height: 125px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #35363B;
+        border-radius: 20px;
+    }
+    .images {
+        height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        
+    }
+    .discord-logo {
+        width: 250px;
+        height: 120px;
+    }
+    .discord-logo img {
+        width: 220px;
+        height: 75px;
+        margin-top: 25px;
+    }
+    .discord-agartha {
+        width: 90px;
+        height: 100px;
+    }
+    .discord-agartha img{
+        width: 60px;
+        height: 60px;
+        margin-top: 25px;
+        border-radius: 27,5px;
+    }
+
+    .foot {
+        width: 100%;
+    }
+    .area-foot {
+        width: 100%;
+        
+    }
+    .imagem-footer {
+        display: flex;
+        margin: auto;
+        align-items: center;
+    } 
+    .agradecimento {
+        width: 100%;
+        font-size: 12px;
+    }
 }
